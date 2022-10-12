@@ -1,0 +1,23 @@
+sudo php bin/magento setup:upgrade
+sudo php bin/magento setup:di:compile
+sudo php bin/magento setup:static-content:deploy -f
+sudo php bin/magento cache:clean
+sudo chmod -R 777 .
+
+
+
+
+
+<?php
+use \Quantity\ButtonModule\Helper\Data;
+class RandomClass
+{
+       public function __construct(Data $helper)
+       {
+               $this->helper = $helper;
+       }
+       public function func()
+       {
+               $this->helper->getDisplayQty();
+       }
+} ?>

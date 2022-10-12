@@ -1,0 +1,11 @@
+<?php
+/** @var \Hassan\DbPractice\Block\Hello $block */
+?>
+<?php echo $block->getLabel(); ?> <br> <br>
+
+<?php foreach ($block->getItems() as $student): ?>
+    <p>
+        <?php Name :  echo $student->getName(); ?> <br> <?php Email: echo $student->getEmail(); ?> <br>
+        <?php  University : echo $student->getUniversity(); ?> <br> <?php CGPA : echo $student->getCgpa(); ?> <br><br>
+    </p>
+<?php endforeach; ?>
